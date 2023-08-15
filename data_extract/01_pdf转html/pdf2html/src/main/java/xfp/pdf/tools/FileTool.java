@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 
 
 public class FileTool {
+    public static String seperator = "/";
     public static String saveText(String outputFileDir, ContentPojo contentPojo, String fileName){
         if(outputFileDir==null){
             return "";
@@ -157,7 +158,7 @@ public class FileTool {
         }
         FileWriter fwriter = null;
         try {
-            String name = fileName.split("\\\\")[fileName.split("\\\\").length - 1].split("\\.")[0];
+            String name = fileName.split(seperator)[fileName.split(seperator).length - 1].split("\\.")[0];
             // true表示不覆盖原来的内容，而是加到文件的后面。若要覆盖原来的内容，直接省略这个参数就好
             fwriter = new FileWriter(outputFileDir+"/"+name+".html", false);
             fwriter.write(sb.toString());

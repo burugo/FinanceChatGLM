@@ -15,6 +15,10 @@ public class Pdf2html {
     public static void main(String[] args) throws IOException {
 
         File file = new File(Path.inputAllPdfPath);
+        if (!file.exists()){
+            System.out.println(file.getAbsolutePath());
+            return;
+        }
         File[] files = file.listFiles();
         for (File f : files) {
             PDDocument pdd = null;
