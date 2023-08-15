@@ -77,7 +77,7 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
                     <descriptors>
-                        <descriptor>src\main\resources\assembly.xml</descriptor>
+			    <descriptor>src/main/resources/assembly.xml</descriptor>
                     </descriptors>
 <!--                                        <archive>-->
 <!--                                            <manifest>-->
