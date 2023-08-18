@@ -30,9 +30,14 @@ public class Pdf2html {
                 FileTool.saveHTML(Path.outputAllHtmlPath, contentPojo, f.getAbsolutePath());
                 int progress = (i + 1) * 100 / files.length;
                 System.out.println("Processing file " + (i + 1) + " of " + files.length + " (" + progress + "%): " + f.getName());
-            } catch (IOException e) {
+            } 
+            catch (IOException e) {
                 e.printStackTrace();
-            } finally {
+            } 
+            catch (Exception e){
+                e.printStackTrace();
+            }
+            finally {
                 try {
                     pdd.close();
                 } catch (IOException e) {
